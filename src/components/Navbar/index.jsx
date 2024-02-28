@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 const Navbar = () => {
   //assigning location variable
@@ -17,8 +17,12 @@ const Navbar = () => {
         </h1>
       </nav>
       <div className="grid grid-cols-2 bg-[#F5EBE0] text-black text-center text-xl font-semibold w-full">
-        <NavLink to={"/personal"} className={`py-1 ${(splitLocation[1] === "personal" || splitLocation[1] === "") && "border-b-4 border-[#DBA39A]"}`}>Personal</NavLink>
-        <NavLink to={"/professional"} className={`py-1 ${splitLocation[1] === "professional" && "border-b-4 border-[#DBA39A]"}`}>Professional</NavLink>
+        <Link to={"/personal"} className={`py-1 ${(splitLocation[1] === "personal" || splitLocation[1] === "") && "border-b-4 border-[#DBA39A]"}`}>
+          Personal
+        </Link>
+        <Link to={"/professional"} className={`py-1 ${splitLocation[1] === "professional" && "border-b-4 border-[#DBA39A]"}`}>
+          Professional
+        </Link>
       </div>
     </>
   )
